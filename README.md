@@ -1,17 +1,17 @@
 # Proyecto product
    * Crear clase Product
-       - [ ] Paquetes
+       - [x] Paquetes
        - [ ] Imports
-       - [ ] Constantes / Atributos
-       - [ ] Constructor
+       - [x] Constantes / Atributos
+       - [x] Constructor
        - [ ] Métodos
-       - [ ] Métodos Getter y Setter
-       - [ ] toString
+       - [x] Métodos Getter y Setter
+       - [x] toString
     * Crear una clase Main
               - [ ] Crear cinco productos
               - [ ] Crear un Array de productos
               - [ ] Estadistica
-                    * Calcular la suma precio total de los array
+                    * Calcular la suma del precio total del array
                     * Calcular la media de precio de los productos array
                     * Calcular el precio máximo
 

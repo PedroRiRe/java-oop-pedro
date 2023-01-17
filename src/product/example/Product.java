@@ -2,22 +2,23 @@ package product.example;
 
 public class Product {
 
-    private Integer name;
+    private String name;
     private Double price;
 
     public Product() {
     }
 
-    public Product(Integer name, Double price) {
+    public Product(String name, Double price) {
         this.name = name;
         this.price = price;
     }
 
-    public Integer getName() {
+
+    public String getName() {
         return name;
     }
 
-    public void setName(Integer name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -32,7 +33,7 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "name=" + name +
+                "name='" + name + '\'' +
                 ", price=" + price +
                 '}';
     }
