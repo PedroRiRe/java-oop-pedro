@@ -5,30 +5,23 @@ public class Product {
 
     private String name;
     private Double price;
+
+    // Asociaciones de clases
     private String manufacturer;
     private Integer units;
+    private ProductCategory category;
 
 
 
     public Product() {
     }
 
-    public Product(String name, Double price) {
-        this.name = name;
-        this.price = price;
-    }
-
-    public Product(String name, Double price, String manufacturer) {
-        this.name = name;
-        this.price = price;
-        this.manufacturer = manufacturer;
-    }
-
-    public Product(String name, Double price, String manufacturer, Integer units) {
+    public Product(String name, Double price, String manufacturer, Integer units, ProductCategory category) {
         this.name = name;
         this.price = price;
         this.manufacturer = manufacturer;
         this.units = units;
+        this.category = category;
     }
 
     public String getName() {
@@ -63,5 +56,20 @@ public class Product {
         this.units = units;
     }
 
+    public ProductCategory getCategory() {
+        return category;
+    }
 
+    public void setCategory(ProductCategory category) {
+        this.category = category;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", units=" + units +
+                '}';
+    }
 }

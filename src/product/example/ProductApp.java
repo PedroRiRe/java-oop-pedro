@@ -8,11 +8,11 @@ public class ProductApp {
     public static void main(String[] args) {
 
         // Crea cinco productos
-        Product prod1 = new Product("Laptop", 1495.99);
-        Product prod2 = new Product("Shoes", 85.50);
-        Product prod3 = new Product("Car", 23685.75);
-        Product prod4 = new Product("SmartTV", 3000d);
-        Product prod5 = new Product("Smartphone", 789.95);
+        Product prod1 = new Product("Laptop", 1495.99, "Toshiba", 4, ProductCategory.COMPUTER);
+        Product prod2 = new Product("Shoes", 85.50, "Adidas", 10, ProductCategory.WEAR);
+        Product prod3 = new Product("Car", 23685.75, "Volvo", 0, ProductCategory.VEHICLE);
+        Product prod4 = new Product("SmartTV", 3000d, "OKI", 2, ProductCategory.TELEVISION);
+        Product prod5 = new Product("Smartphone", 789.95, "Apple", 6, ProductCategory.PHONES);
 
         // Crea un array de los productos
         Product[] products = {prod1, prod2, prod3, prod4, prod5};
@@ -30,6 +30,8 @@ public class ProductApp {
 
         // Estadistica imprimir
 
+        System.out.println("El valor de todos nuestros productos asciende a " + totalPrice);
+        System.out.println("Tenemos " + count + " articulos disponibles");
         System.out.println("Precio medio de los productos: " + avgPrices);
         System.out.println("El producto más barato cuesta " + minPrices + "€");
         System.out.println("Nuestro producto más caro vale " + maxPrices + "€");
