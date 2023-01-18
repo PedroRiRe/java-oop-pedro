@@ -1,9 +1,13 @@
 package product.example;
 
+
 public class Product {
 
     private String name;
     private Double price;
+    private String manufacturer;
+    private Integer units;
+
 
     public Product() {
     }
@@ -13,6 +17,18 @@ public class Product {
         this.price = price;
     }
 
+    public Product(String name, Double price, String manufacturer) {
+        this.name = name;
+        this.price = price;
+        this.manufacturer = manufacturer;
+    }
+
+    public Product(String name, Double price, String manufacturer, Integer units) {
+        this.name = name;
+        this.price = price;
+        this.manufacturer = manufacturer;
+        this.units = units;
+    }
 
     public String getName() {
         return name;
@@ -30,11 +46,21 @@ public class Product {
         this.price = price;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+    public String getManufacturer() {
+        return manufacturer;
     }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public Integer getUnits() {
+        return units;
+    }
+
+    public void setUnits(Integer units) {
+        this.units = units;
+    }
+
+
 }
