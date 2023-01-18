@@ -18,25 +18,23 @@ public class ProductApp {
         Product[] products = {prod1, prod2, prod3, prod4, prod5};
         System.out.println(Arrays.toString(products));
 
-        // Calcula la suma total de precios del array
-        double totalPrice = 0;
-        for (int i = 0; i < products.length; i++) {
-            if (products[i].getPrice() != null)  // comprobación de nulos
-             totalPrice += products[i].getPrice();
-        }
-        System.out.println("La suma de todos los precios es " + totalPrice);
+        // Estadisticas calculos
+        ProductStats productStats = new ProductStats();
 
-        // Calcular la media de precio de los productos array
-        double avgPrice =  totalPrice / products.length;
-        System.out.println("La media del precio de los productos es de " + avgPrice);
+        double totalPrice = productStats.sumPrices(products);
+        int count = productStats.count(products);
+        double avgPrices = productStats.avgPrice(products);
+        double maxPrices = productStats.maxPrices(products);
+        double minPrices = productStats.minPrice(products);
+        double stockPrices = productStats.sumPricesByQuantity(products);
 
-        // Calcular el precio máximo
-        double maxPrice = 0d;
-        for (Product product: products) {
-            if (product.getPrice() != null && product.getPrice() > maxPrice)  //compr. null && compara precios
-                maxPrice = product.getPrice();
-        }
-        System.out.println("El precio máximo es " + maxPrice);
+        // Estadistica imprimir
+
+        System.out.println("Precio medio de los productos: " + avgPrices);
+        System.out.println("El producto más barato cuesta " + minPrices + "€");
+        System.out.println("Nuestro producto más caro vale " + maxPrices + "€");
+        System.out.println("El precio total del stock es " + stockPrices);
+
     }
 
 }

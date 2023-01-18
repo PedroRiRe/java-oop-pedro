@@ -14,4 +14,11 @@ public class Stock {
     public void setUnits(Integer units) {
         this.units = units;
     }
+
+    @Override
+    public String toString() {
+        return "Stock{" +
+                "units=" + units +
+                '}';
+    }
 }
