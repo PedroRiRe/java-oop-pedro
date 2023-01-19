@@ -4,7 +4,7 @@
        - [ ] Imports
        - [x] Constantes / Atributos
        - [x] Constructor
-       - [ ] Métodos
+       - [x] Métodos
        - [x] Métodos Getter y Setter
        - [x] toString
     * Crear una clase Main
